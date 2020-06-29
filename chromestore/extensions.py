@@ -36,7 +36,7 @@ class Extension:
                 ret = meta.attrs['content']
         return ret
 
-    def json(self):
+    def dict(self):
         data = {}
         for property_name in [p for p in dir(Extension) if isinstance(getattr(Extension, p), property)]:
             data[property_name] = getattr(self, property_name)
